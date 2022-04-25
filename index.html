@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+    <!--HEAD-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Jamie Hanh Le's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    </head>
+    <!--HEAD END-->
+
+    <!--BODY-->
+    <body class="background">
+
+        <!--NAVBAR-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Github">Github</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+    <br>
+    <br>
+
+    <!--Background Video-->
+    <div id="Home">
+        <video autoplay muted loop id="Stretch_video">
+            <source src="./images/videos/computer_stretching.mp4" type="video/mp4" max_height="576px">
+            <!--Display message if video fails to run-->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!--Video Text-->
+    <div class="Video_Text">
+        <h1 class="white-text">Jamie Hanh Le's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>Success is the sum of small efforts repeated day in and day out.</q>
+                <br>
+                <br>-Robert Collier
+                <br>
+                <br> My name is Hanh, and this is where I will be posting you my Github and where you can contact me at! Reach out if you'd like!
+                <br>
+                <br> Thank you for stopping by, and talk to you soon!
+            </p>
+        </strong>
+    </div>
+<!--END VIDEO SECTION-->
+
+    <!--ABOUT Section-->
+    <div class="Row" id="About">
+
+        <!--Left column-->
+        <div class="column_2">
+            <img src="./images/typing_photo.jpg" alt="Typing photo">
+        </div>
+
+        <!--Right column-->
+        <div class="column_1">
+            <h1>About</h1>
+            <p class="info"> Hey there, I'm Hanh! I'm a junior soon-to-be-full-stack developer, and I enjoy spending time with my cat Lentil and with my friends jammin' out to music.
+
+                This is my portfolio website while I'll be going to school at The Tech Academy. Hope you enjoy your stay, and I will deliver my best and constantly improving efforts!
+            </p>
+        </div>
+    </div>
+<!--END ABOUT SECTION-->
+
+ <!--GITHUB SECTION-->
+    <div class="Row" id="Github">
+
+        <!--Left column-->
+        <div class="column_1">
+            <h1>GitHub</h1>
+            <p class="info">
+                You can view my coding projects on my Github Profile here:
+                <br>
+                <p class="center"><a href="https://github.com/LeHanhJ" target="_blank">Hanh's Github
+                </a></p>
+            </p>
+        </div>
+
+        <!--Right column-->
+        <div class="column_2">
+            <a href="https://github.com/LeHanhJ" target="_blank"><img src="./images/github_logo2.png" alt="Github Logo"></a>
+        </div>
+    </div>
+<!--END GITHUB SECTION-->
+
+<!--CONTACT SECTION-->
+    <div class="Row" id="Contact">
+
+        <!--Contact image, left column-->
+        <div class="column_2 column_tall">
+            <img src="./images/portland_max.jpg" alt="Contact Image">
+        </div>
+
+        <!--Contact form, right column-->
+        <div class="column_1 column_tall">
+            <h1>Contact</h1>
+            <!--This specifies where and how to send the form data; we are leaving it blank-->
+            <form action="https://formspree.io/f/xnqwgowq" method="POST"> <!--Here we are utilizing a third-party service to submit the contact form data, insert formspree endpoint in the action attribute-->
+                <label>Name: </label>
+                    <input type="text" placeholder="Please enter your name here">
+                <label>Email: </label>
+                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                <label>Message: </label>
+                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                    <input type="submit" value="SUBMIT">
+            </form>
+        </div>
+    </div>
+<!--END CONTACT SECTION-->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <!--FOOTER-->
+    <footer id="footer">
+        <p>
+            <p class="center">&copy; Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+            <br>
+        </p>
+    </footer>
+    <!--END FOOTER-->
+
+
+    </body>
+
+</html>
