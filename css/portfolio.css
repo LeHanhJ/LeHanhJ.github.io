@@ -1,4 +1,10 @@
 /****GENERAL SYTLING ****/
+
+/*HTML*/
+html {
+    scroll-behavior: smooth;
+}
+
 /* BODY */
 body {
     margin: 0%; /*This ensures our site displays all the way to the edge of the browser screens */
@@ -209,9 +215,19 @@ img:hover {
     width: 45%; /*This ensures the column takes up half of the page width */
     padding: 8px;
     padding-top: 2%; /* This ensures there is space between the top of the column and our headings */
-    height: 375px; /* This setes the height of the column  to 400px - this may need to be adjusted depending on the text you enter */
-    background-color: rgba(132, 168, 192,0.35   )
-    ; /*Sets background color of the columns with class Column_1 */
+    height: 350px; /* This setes the height of the column  to 400px - this may need to be adjusted depending on the text you enter */
+    background-color: rgba(132, 168, 192,0.40   ) ; /*Sets background color of the columns with class Column_1 */
+    padding-left: 2em;
+    border-radius: 10px;
+}
+
+.column_4 {
+    float: right;
+    width: 45%; /*This ensures the column takes up half of the page width */
+    padding: 8px;
+    padding-top: 2%; /* This ensures there is space between the top of the column and our headings */
+    height: 350px; /* This setes the height of the column  to 400px - this may need to be adjusted depending on the text you enter */
+    background-color: rgba(132, 168, 192,0.40   ) ; /*Sets background color of the columns with class Column_1 */
     padding-left: 2em;
     border-radius: 10px;
 }
@@ -225,12 +241,24 @@ img:hover {
 
 .column_2 {
     float: right;
-    width: 50%;
+    width: 45%;
     padding: 8px;
     padding-top: 2%;
-    height: 375px;
+    height: 350px;
     background-color: #304a5b;
     border-radius: 10px;
+    padding-left:2em;
+}
+
+.column_3 {
+    float: left;
+    background-color: #304a5b;
+    width:45%;
+    padding:8px;
+    padding-top:2%;
+    padding-left:2%;
+    height:350px;
+    border-radius:10px;
 }
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form while keeping the rest of the formatting from column_1 or column_2 */
@@ -248,9 +276,86 @@ img:hover {
 }
 /******END OF TABLE STYLINGS *******/
 
+/******CONTACT FORM CONTAINER STYLINGS*******/
+.open-button { /*button used to open contact form*/
+    background-color:rgba(24, 39, 47, 0.8);
+    color:#ccc;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: .95;
+    position: sticky;
+    bottom: 23px;
+    right: 28px;
+    top:0;
+    width: 280px;
+    float:right;
+}
+
+/*Add styles to the form container */
+.form-popup {
+    display:none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;;
+    z-index: 9;
+    width: 400px;
+}
+
+input {
+    border: 2px black; 
+}
+
+/*Add styles to the form container*/
+.form-container {
+    width: 100%;
+    max-width:300px;
+    padding: 10px;
+    background-color:white;
+}
+
+.form-container input[type=text], .form-container input[type=email] {
+    width: 100%;
+    padding: 20px;
+    margin: 5px 0 22px 0;
+    border: 2px #304a5b;
+    background:white;
+}
+
+
+/*Set a style for Submit button*/
+.form-container .btn {
+    background-color:#304a5b;
+    color:rgb(135, 156, 169);
+    padding: 16px 20px;
+    border: 2px black;
+    cursor:pointer;
+    width:100%;
+    margin-bottom:10px;
+    opacity:.95;
+}
+
+/*Add a red background color to the cancel button*/
+.form-container .cancel {
+    background-color:#791c1c;
+}
+
+/*Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity:1;
+}
+
+button.sticky {
+    position:sticky;
+    top:0;
+    right:28;
+}
+
+/*********END CONTACT FORM CONTAINER STYLINGS *********/
+
 /******CONTACT FORM STYLING *******/
 /* input[type=text] targets all text input sections of the contact form */
-input[type=text] {
+input[type=text], input[type=email] {
     width: 100%; /* Each input box covers the full width of the container */
     padding: 12px; /*Adds padding within the text box */
     border: 1px solid #ccc; /* Setting a solid border and its colors */
@@ -263,12 +368,12 @@ input[type=text] {
 }
 
 /*Hover effects for input boxes */
-input[type=text]:hover {
+input[type=text]:hover, input[type=email]:hover {
     box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
 }
 
 /* SUBMIT BUTTON */
-input[type=submit] {
+input[type=submit], button[type=button] {
     background-color: #304a5b; /*Sets the background color of the submit butoon to plack */
     color: white; /* Sets teh font color of the submit button to white */
     font-weight: bold; /*Makes the font of the submit button bold */
@@ -283,14 +388,22 @@ input[type=submit] {
 }
 
 /*Hover effect for submit button */
-input[type=submit]:hover {
+input[type=submit]:hover, button[type=button]:hover{
     background-color: #5a96bf; /*Turns the background of the submit button white when the user hovers over it */
     color: white; /*Turns the font black when hovered over */
-    transform: scale(1.1); /*Makes the button increase 1.5 times in size */
+    transform: scale(1.05); /*Makes the button increase 1.5 times in size */
     transition: transform 1.1s; /*Makes the transform effect last in 1.5 seconds */
 }
+
+button[type=button]:hover{
+    background-color: #a23131; /*Turns the background of the submit button white when the user hovers over it */
+    color: white; /*Turns the font black when hovered over */
+    transform: scale(1.05); /*Makes the button increase 1.5 times in size */
+    transition: transform 1.1s; /*Makes the transform effect last in 1.5 seconds */
+}
+
 label {
-    color:aliceblue;
+    color:rgb(8, 30, 50);
 }
 /*Form element */
 form {
@@ -301,6 +414,8 @@ form {
     margin-left: 1.5em;
     margin-right: auto;
 }
+
+
 /******END OF CONTACT FORM STYLING*******/
 
 /* Styling for footer element */

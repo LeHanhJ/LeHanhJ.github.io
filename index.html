@@ -54,12 +54,12 @@
     <div class="Row" id="About">
 
         <!--Left column-->
-        <div class="column_2">
+        <div class="column_3">
             <img src="./images/typing_photo.jpg" alt="Typing photo">
         </div>
 
         <!--Right column-->
-        <div class="column_1">
+        <div class="column_4">
             <h1>About</h1>
             <p class="info"> Hey there, I'm Hanh! I'm a junior soon-to-be-full-stack developer, and I enjoy spending time with my cat Lentil and with my friends jammin' out to music.
 
@@ -94,25 +94,34 @@
     <div class="Row" id="Contact">
 
         <!--Contact image, left column-->
-        <div class="column_2 column_tall">
+        <div class="column_3 column_tall">
             <img src="./images/portland_max.jpg" alt="Contact Image">
         </div>
 
-        <!--Contact form, right column-->
-        <div class="column_1 column_tall">
+<!--CONTACT FORM-->
+<div id="contact">
+    <button class="open-button sticky" onclick="openForm()">Contact</button>
+    <div class="form-popup" id="myForm" name="myForm">
+        <!--This specifies where and how to send the form data; we are leaving it blank-->
+    <form name="myForm" action="https://formspree.io/f/xnqwgowq" onsubmit="validateForm()" method="post" class="form-container">
             <h1>Contact</h1>
-            <!--This specifies where and how to send the form data; we are leaving it blank-->
-            <form action="https://formspree.io/f/xnqwgowq" method="POST"> <!--Here we are utilizing a third-party service to submit the contact form data, insert formspree endpoint in the action attribute-->
-                <label>Name: </label>
-                    <input type="text" placeholder="Please enter your name here">
-                <label>Email: </label>
-                    <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                <label>Message: </label>
-                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                    <input type="submit" value="SUBMIT">
-            </form>
-        </div>
+
+                <!--Here we are utilizing a third-party service to submit the contact form data, insert formspree endpoint in the action attribute-->
+                <label for="fname">Name: </label><br>
+                    <input type="text" id="fname" name="fname" placeholder="" required><br>
+                <label for="Email">Email: </label><br>
+                    <input type="email" id="Email" name="Email" placeholder="" required><br>
+                <label for="Message">Message: </label><br>  
+                    <input type="text" id="Message" name="Message" placeholder="" required><br>
+                    <input type="submit" value="Submit" class="btn"><br>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            
+       
+        </form> 
     </div>
+</div>
+</div>
+
 <!--END CONTACT SECTION-->
 
 <br>
@@ -130,7 +139,7 @@
     </footer>
     <!--END FOOTER-->
 
-
+    <script src="./js/portfolio.js"></script>
     </body>
 
 </html>
