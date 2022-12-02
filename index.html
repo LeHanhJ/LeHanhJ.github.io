@@ -4,9 +4,12 @@
     <!--HEAD-->
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Jamie Hanh Le's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+
+        <!--Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     </head>
     <!--HEAD END-->
 
@@ -14,11 +17,11 @@
     <body class="background">
 
         <!--NAVBAR-->
-        <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Github">Github</a>
-            <a href="#Contact">Contact</a>
+        <div class="navbar">
+            <a class="navbar active" href="#Home">Home</a>
+            <a class="navbar" href="#About">About</a>
+            <a class="navbar" href="#Github">Github</a>
+            <a  class="navbar"href="#Contact">Contact</a>
         </div>
 
     <br>
@@ -35,16 +38,13 @@
 
     <!--Video Text-->
     <div class="Video_Text">
-        <h1 class="white-text">Jamie Hanh Le's Portfolio</h1>
+        <h1 class="white-text">Hanh Le's Portfolio</h1>
         <strong>
             <p class="center">
                 <q>Success is the sum of small efforts repeated day in and day out.</q>
-                <br>
                 <br>-Robert Collier
                 <br>
-                <br> My name is Hanh, and this is where I will be posting you my Github and where you can contact me at! Reach out if you'd like!
-                <br>
-                <br> Thank you for stopping by, and talk to you soon!
+                <br> My name is Hanh! Thank you for stopping by, and I hope to talk to you soon! Please use my contact form in the bottom right to reach out to me!
             </p>
         </strong>
     </div>
@@ -61,9 +61,13 @@
         <!--Right column-->
         <div class="column_4">
             <h1>About</h1>
-            <p class="info"> Hey there, I'm Hanh! I'm a junior soon-to-be-full-stack developer, and I enjoy spending time with my cat Lentil and with my friends jammin' out to music.
+            <p class="info"> Hey there, I'm Hanh! I'm a junior full-stack developer! I'm a soon-to-be-graduate of The Tech Academy's Software Development Bootcamp.
+                
+                I'm looking into many areas of software development, but my long term goal include working in the healthcare sector of software development.
 
-                This is my portfolio website while I'll be going to school at The Tech Academy. Hope you enjoy your stay, and I will deliver my best and constantly improving efforts!
+                Please take a look at the many different projects I've done over the past year on my Github! I've even included a code summary of my favorite project, so check that out as well!
+
+
             </p>
         </div>
     </div>
@@ -80,6 +84,9 @@
                 <br>
                 <p class="center"><a href="https://github.com/LeHanhJ" target="_blank">Hanh's Github
                 </a></p>
+                <p><br>Here is a code summary of the last project I worked on!</p>
+                <p class="center"><a href="#" target="_blank">My Favorite Project (Under Construction)
+                </a>
             </p>
         </div>
 
@@ -94,13 +101,20 @@
     <div class="Row" id="Contact">
 
         <!--Contact image, left column-->
-        <div class="column_3 column_tall">
-            <img src="./images/portland_max.jpg" alt="Contact Image">
-        </div>
+       <div class="contact-column column_tall">
+        <h1>Contact</h1>
+            <p class="contact-box info">
+                You can reach out to me by filling out the Contact form on the bottom right of the screen, or you can reach out to me at:
+                <br>
+                <p class="center"><a href="mailto:jamiehanhle@gmail.com?" target="_blank">
+                    jamiehanhle@gmail.com
+                </a>
+            </p>
+       </div>
 
 <!--CONTACT FORM-->
 <div id="contact">
-    <button class="open-button sticky" onclick="openForm()">Contact</button>
+    <button class="open-button sticky contact-btn" onclick="openForm()">Contact</button>
     <div class="form-popup" id="myForm" name="myForm">
         <!--This specifies where and how to send the form data; we are leaving it blank-->
     <form name="myForm" action="https://formspree.io/f/xnqwgowq" onsubmit="validateForm()" method="post" class="form-container">
@@ -139,8 +153,11 @@
         </p>
     </footer>
     <!--END FOOTER-->
-
     <script src="./js/portfolio.js"></script>
-    </body>
+
+    <!--JQuery and Bootstrap Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+ </body>
 
 </html>
