@@ -130,12 +130,12 @@ img:hover {
 
 /*** NAVBAR STYLING ***/
 .navbar a {
-    background-color: rgb(221, 170, 162);
+    background-color: rgb(194, 130, 121);
     color:#000000;
     font-weight: bold;
     float: top; /*This specifies that the text floats on the left on the navbar */
     display: block table-column; /*This ensures that other text will be displayed on the same line or row, instead of   a new line */
-    color: #5a96bf; /*This is the font color for the text of your navbar */
+    color: #304a5b; /*This is the font color for the text of your navbar */
     text-decoration: none; /*This gets rid of the underlines under the text on our navbar */
     padding: 14px 16px; /*This adds padding around our text */
     font-family:'Courier New', Courier, monospace;
@@ -276,6 +276,18 @@ img:hover {
     border-radius:10px;
 }
 
+.link-column {
+    float: right;
+    background-color: rgb(194, 130, 121, 0.85);
+    color:#000000;
+    width:45%;
+    padding:8px;
+    padding-top:2%;
+    padding-left:2em;
+    height:300px;
+    border-radius:10px;
+}
+
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form while keeping the rest of the formatting from column_1 or column_2 */
 .column_tall {
@@ -294,7 +306,7 @@ img:hover {
 
 /******CONTACT FORM CONTAINER STYLINGS*******/
 .open-button { /*button used to open contact form*/
-    background-color: rgb(186, 143, 136);
+    background-color: rgb(194, 130, 121);
     color:rgb(8, 30, 50);
     padding: 10px 10px;
     border: solid rgb(8, 30, 50);
@@ -335,7 +347,7 @@ button.sticky {
     width: 100%;
     max-width:500px;
     padding: 20px;
-    background-color:rgb(186, 143, 136);
+    background-color:rgb(194, 130, 121);
     padding:10px;
     border:#00004d;
 }
@@ -402,7 +414,7 @@ input[type=text]:hover, input[type=email]:hover {
 /* SUBMIT BUTTON */
 input[type=submit], button[type=button] {
     background-color: #304a5b; /*Sets the background color of the submit butoon to plack */
-    color: white; /* Sets teh font color of the submit button to white */
+    color: white; /* Sets the font color of the submit button to white */
     font-weight: bold; /*Makes the font of the submit button bold */
     padding: 12px 20px 10px; /*Adds padding to the submit button */
     border: none; /*Removes the border from the submit button */
@@ -448,7 +460,7 @@ form {
 /* Styling for footer element */
 footer { 
     padding: 3%; /*This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color:  rgb(186, 143, 136); /*#5a96bf*/;
+    background-color:  rgb(194, 130, 121); /*#5a96bf*/;
     position:fixed;
     margin-bottom: 0;
     bottom:0;
