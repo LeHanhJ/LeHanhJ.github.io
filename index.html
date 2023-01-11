@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Jamie Hanh Le's Portfolio</title>
+
         <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
 
         <!--Bootstrap CSS -->
@@ -14,16 +15,31 @@
     <!--HEAD END-->
 
     <!--BODY-->
-    <body class="background">
-
+    <body>
         <!--NAVBAR-->
-        <div class="navbar">
-            <a class="navbar active" href="#Home">Home</a>
-            <a class="navbar" href="#About">About</a>
-            <a class="navbar" href="#Github">Github</a>
-            <a  class="navbar"href="#Contact">Contact</a>
-        </div>
+        <nav class="navbar navbar-expand-md">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#Home">Home</a>
+                <a class="nav-item nav-link" href="#About">About</a>
+                <a class="nav-item nav-link" href="#Github">Github</a>
+                <a class="nav-item nav-link" href="#Contact">Contact</a>
+              </div>
+            </div>
+          </nav>
 
+
+        <!--<nav>
+      <ul class="nav-bar">
+            <li><a class="navbar nav-bar active" href="#Home">Home</a></li>
+            <li><a class="navbar" href="#About">About</a></li>
+            <li><a class="navbar" href="#Github">Github</a></li>
+            <li><a class="navbar"href="#Contact">Contact</a></li>
+        </ul>
+</nav>-->
     <br>
     <br>
 
@@ -31,7 +47,7 @@
     <div id="Home">
         <video autoplay muted loop id="Stretch_video">
             <source src="./images/videos/computer_stretching.mp4" type="video/mp4" max_height="576px">
-            <!--Display message if video fails to run-->
+           <!-- Display message if video fails to run -->
             Your browser does not support HTML5 video.
         </video>
     </div>
@@ -53,15 +69,15 @@
     <!--ABOUT Section-->
     <div class="Row" id="About">
 
-        <!--Left column-->
-        <div class="column_3">
+        <!--Typing square-->
+        <div class="left-typing-image-column">
             <img src="./images/typing_photo.jpg" alt="Typing photo">
         </div>
 
-        <!--Right column-->
-        <div class="column_4">
+        <!--Right About Column-->
+        <div class="right-about-column">
             <h1>About</h1>
-            <p class="info"> Hey there, I'm Hanh! I'm a junior full-stack developer! I'm a soon-to-be-graduate of The Tech Academy's Software Development Bootcamp.
+            <p class="about-info"> Hey there, I'm Hanh! I'm a junior full-stack developer! I'm a soon-to-be-graduate of The Tech Academy's Software Development Bootcamp.
                 
                 I'm looking into many areas of software development, but my long term goal include working in the healthcare sector of software development.
 
@@ -76,8 +92,8 @@
  <!--GITHUB SECTION-->
     <div class="Row" id="Github">
 
-        <!--Left column-->
-        <div class="column_1">
+        <!--Left github links column-->
+        <div class="left-github-column">
             <h1>GitHub</h1>
             <p class="info">
                 You can view my coding projects on my Github Profile here:
@@ -90,8 +106,8 @@
             </p>
         </div>
 
-        <!--Right column-->
-        <div class="column_2">
+        <!--Right github logo column-->
+        <div class="right-github-logo-column">
             <a href="https://github.com/LeHanhJ" target="_blank"><img src="./images/github_logo2.png" alt="Github Logo"></a>
         </div>
     </div>
@@ -106,10 +122,11 @@
             <p class="contact-box info">
                 You can reach out to me by filling out the Contact form on the bottom right of the screen, or you can reach out to me at:
                 <br>
-                <p class="center"><a href="mailto:jamiehanhle@gmail.com?" target="_blank">
+                <p class="center">
+                    <a href="mailto:jamiehanhle@gmail.com?" target="_blank">
                     jamiehanhle@gmail.com
-                </a>
-            </p>
+                    </a>
+             </p>
        </div>
 <!--END CONTACT SECTION-->
 
@@ -117,7 +134,7 @@
     <div class="Row" id="Links">
 
         <!--Link bar, Right Column-->
-        <div class="link-column column-tall">
+        <div class="right-link-column column-tall">
             <h1>Other Quick Links</h1>
             <br>
                 <p class="link-box">

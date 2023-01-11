@@ -1,15 +1,15 @@
 /****GENERAL SYTLING ****/
-
+/* BODY */
+body{
+    /* margin: 0%; This ensures our site displays all the way to the edge of the browser screens */
+    background-color:#22445c !important;
+}
 /*HTML*/
 html {
     scroll-behavior: smooth;
 }
 
-/* BODY */
-body {
-    margin: 0%; /*This ensures our site displays all the way to the edge of the browser screens */
-    background-color:#18272F;
-}
+
 
 /* Heading 1 elements */
 h1{
@@ -88,7 +88,7 @@ p.center {
 }
 /*Anchor elements */
 a {
-    color: #243844; /*This ensures all links are blue*/
+    color: #e17d7d; /*This ensures all links are blue*/
 }
 
 /* Quotation elements */
@@ -128,52 +128,100 @@ img:hover {
 
 /*** END OF GENERAL STYLING ***/
 
-/*** NAVBAR STYLING ***/
-.navbar a {
-    background-color: rgb(194, 130, 121);
-    color:#000000;
+/*********************** NAVBAR STYLING *******************8**/
+/*Navbar With Bootstrap 4.6 */
+.navbar {
+    display: flex;
+    flex-direction:row;
+    margin: 10;
+    padding: 15px;
+    list-style: none;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+.navbar-nav {
+    justify-content: center;
+}
+
+/* Navbar without Bootstrap*/
+/* .nav-bar { 
+    display: flex;
+    flex-direction:row;
+    margin: 10;
+    padding: 15px;
+    list-style: none;
+    justify-content: center;
+    align-content: space-evenly;
+    flex-grow:1;
+    border-radius: 20%;
+} */
+
+/*Navbar V2 12/22*/
+
+.nav-item {
+    background-color: #82b7da;
+    color:#000000 !important;
     font-weight: bold;
     float: top; /*This specifies that the text floats on the left on the navbar */
-    display: block table-column; /*This ensures that other text will be displayed on the same line or row, instead of   a new line */
-    color: #304a5b; /*This is the font color for the text of your navbar */
     text-decoration: none; /*This gets rid of the underlines under the text on our navbar */
-    padding: 14px 16px; /*This adds padding around our text */
+    padding: 14px 30px; /*This adds padding around our text */
     font-family:'Courier New', Courier, monospace;
     font-size: 20px; /* This specifies the font size for text on our navbar*/
     text-align: center; /*This centers the text within its containers */
     position: relative; /*This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveNav 5.75s; /*Animation for Safari 4.0 - 8.0 */
     animation: moveNav 5.75s; /* Applies the moveNavText animation for 5.75s */
+    border-radius: 20%; 
+}
+
+/* Navbar V1  */
+/* .nav-bar a {
+    background-color: #82b7da;
+    color:#000000 !important;
+    font-weight: bold;
+    float: top; /*This specifies that the text floats on the left on the navbar 
+    text-decoration: none; /*This gets rid of the underlines under the text on our navbar 
+    padding: 14px 30px; /*This adds padding around our text 
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px; /* This specifies the font size for text on our navbar
+    text-align: center; /*This centers the text within its containers *
+    position: relative; /*This sets the text relative to its normal positioning, allowing us to use the animation below 
+    -webkit-animation: moveNav 5.75s; /*Animation for Safari 4.0 - 8.0 
+    animation: moveNav 5.75s; /* Applies the moveNavText animation for 5.75s *
+    border-radius: 20%;
 }   
+*/
 
-/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
-@keyframes moveNav {
-    from {right: -50vw;} /*This sets the navbar text 100% above the viewport */
-    to {right: 0vw;} /*This lowers the navbar text onto the navbar */
+/****** Navbar home button ******/
+.nav-item a.active { /* This targets the a element on the navbar with the "active" class */
+    background-color:  #22445c;
+    color: white !important;   
 }
 
-/*Screens 576px and smaller will display navbar links equally distributed */
-@media screen and (max-width: 576px) {
-    .navbar a{
-        width: 25%; /*This makes each link take up 1/4 of the navbar */
-        font-size: 12px;
-    }
-}
-
-/* Navbar hover effects */
-.navbar a:hover {
+/****** Navbar hover effects ******/
+.nav-item a:hover {
     background-color: #5a96bf; /*Defines the background color that will display when you hover over the link */
     color: black; /*This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /*This makes the text on the navbar bold when hovered over */
 }
 
-/* Navbar home button */
-.navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color:  rgb(194, 130, 121);
-    color: white;
-    ;
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar
+@keyframes moveNav {
+    from {right: -50vw;} /*This sets the navbar text 100% above the viewport *
+    to {right: 0vw;} /*This lowers the navbar text onto the navbar *
+} */
+
+/*Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .nav-item a{
+        width: 25%; /*This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
+    }
 }
-/***END OF NAVBAR STYLINGS ***/
+
+
+/***************************END OF NAVBAR STYLINGS ****************/
 
 /** VIDEO STYLING **/
 /* Formatting for background video */
@@ -213,47 +261,7 @@ img:hover {
 }
 /****END OF VIDEO STYLING******/
 
-.column_1 {
-    float: left;
-    width: 45%; /*This ensures the column takes up half of the page width */
-    padding: 8px;
-    padding-top: 2%; /* This ensures there is space between the top of the column and our headings */
-    height: 425px; /* This setes the height of the column  to 400px - this may need to be adjusted depending on the text you enter */
-    background-color: rgba(132, 168, 192,0.40   ) ; /*Sets background color of the columns with class Column_1 */
-    padding-left: 2em;
-    border-radius: 10px;
-}
-
-.column_4 {
-    float: right;
-    width: 45%; /*This ensures the column takes up half of the page width */
-    padding: 8px;
-    padding-top: 2%; /* This ensures there is space between the top of the column and our headings */
-    height: 425px; /* This setes the height of the column  to 400px - this may need to be adjusted depending on the text you enter */
-    background-color: rgba(132, 168, 192,0.40   ) ; /*Sets background color of the columns with class Column_1 */
-    padding-left: 2em;
-    border-radius: 10px;
-}
-
-/*Screens 576px and smaller will display a scroll bar if the text overflows the column height */
-@media screen and (max-width:576px) {
-    .column_1 {
-        overflow: auto;
-    }
-}
-
-.column_2 {
-    float: right;
-    width: 45%;
-    padding: 8px;
-    padding-top: 2%;
-    height: 425px;
-    background-color: #304a5b;
-    border-radius: 10px;
-    padding-left:2em;
-}
-
-.column_3 {
+.left-typing-image-column {
     float: left;
     background-color: #304a5b;
     color:#fff;
@@ -264,9 +272,57 @@ img:hover {
     height:425px;
     border-radius:10px;
 }
+
+.right-about-column {
+    float: right;
+    width: 45%; /*This ensures the column takes up half of the page width */
+    padding: 8px;
+    padding-top: 2%; /* This ensures there is space between the top of the column and our headings */
+    height: 425px; /* This setes the height of the column  to 400px - this may need to be adjusted depending on the text you enter */
+    background-color: #abcadf; /*Sets background color of the columns with class Column_1 */
+    padding-left: 2em;
+    border-radius: 10px;
+}
+
+.about-info{
+align-content: center;
+}
+
+.left-github-column {
+    float: left;
+    width: 45%; /*This ensures the column takes up half of the page width */
+    padding: 8px;
+    padding-top: 2%; /* This ensures there is space between the top of the column and our headings */
+    height: 425px; /* This setes the height of the column  to 400px - this may need to be adjusted depending on the text you enter */
+    background-color: rgba(132, 168, 192,0.40   ) ; /*Sets background color of the columns with class Column_1 */
+    padding-left: 2em;
+    border-radius: 10px;
+}
+
+
+
+/*Screens 576px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width:576px) {
+    .left-github-column {
+        overflow: auto;
+    }
+}
+
+.right-github-logo-column {
+    float: right;
+    width: 45%;
+    padding: 8px;
+    padding-top: 2%;
+    height: 425px;
+    background-color: #304a5b;
+    border-radius: 10px;
+    padding-left:2em;
+}
+
+
 .contact-column {
     float: left;
-    background-color: rgba(132, 168, 192,0.85   );
+    background-color: rgba(132, 168, 192,0.9);
     color:#000000;
     width:45%;
     padding:8px;
@@ -276,9 +332,9 @@ img:hover {
     border-radius:10px;
 }
 
-.link-column {
+.right-link-column {
     float: right;
-    background-color: rgb(194, 130, 121, 0.85);
+    background-color: rgba(132, 168, 192);
     color:#000000;
     width:45%;
     padding:8px;
@@ -286,7 +342,24 @@ img:hover {
     padding-left:2em;
     height:300px;
     border-radius:10px;
+    
 }
+
+
+
+a:link{
+    color: #d11629 !important;
+    
+}
+
+a:visited {
+    color:#590505 !important;
+}
+
+a:hover {
+    color: #e26f6f !important;
+}
+
 
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form while keeping the rest of the formatting from column_1 or column_2 */
@@ -306,8 +379,8 @@ img:hover {
 
 /******CONTACT FORM CONTAINER STYLINGS*******/
 .open-button { /*button used to open contact form*/
-    background-color: rgb(194, 130, 121);
-    color:rgb(8, 30, 50);
+    background-color: #22445c;
+    color: #ffffff;
     padding: 10px 10px;
     border: solid rgb(8, 30, 50);
     cursor: pointer;
@@ -347,9 +420,9 @@ button.sticky {
     width: 100%;
     max-width:500px;
     padding: 20px;
-    background-color:rgb(194, 130, 121);
-    padding:10px;
+    background-color:#abcadf;
     border:#00004d;
+    border-style:groove;
 }
 
 .contact-btn:hover{
@@ -460,7 +533,7 @@ form {
 /* Styling for footer element */
 footer { 
     padding: 3%; /*This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color:  rgb(194, 130, 121); /*#5a96bf*/;
+    background-color:  #5a96bf;
     position:fixed;
     margin-bottom: 0;
     bottom:0;
